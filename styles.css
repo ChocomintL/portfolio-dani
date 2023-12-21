@@ -1,0 +1,429 @@
+/* styles.css */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1a1a1a;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header, section {
+    padding: 20px;
+}
+
+h1, h2 {
+    font-weight: 700;
+}
+
+p, li {
+    font-weight: 400;
+}
+.container {
+    margin: 0 auto;
+    max-width: 1200px; /* ou une autre largeur selon vos préférences */
+    padding: 0 5px; /* Ajoute un peu d'espace à gauche et à droite */
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0); /* Effet de bordure ombre */
+}
+
+body {
+    background-image: url('images/bg1.jpg'); /* Chemin vers votre image de fond */
+    background-size: cover; /* S'assure que l'image couvre toute la page */
+    background-position: center; /* Centre l'image */
+    background-attachment: fixed; /* Fixe l'image lors du défilement */
+    background-repeat: no-repeat; 
+    font-family: 'Roboto', sans-serif;
+    background-color: #1a1a1a;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+h2, h3, h4, h5, h6 {
+    color: white; /* Couleur rouge Netflix */
+    font-size: 29px;
+}
+
+/*pour l'effect du role */
+
+#role {
+    display: inline-block;
+    border-right: 2px solid white;
+    padding-right: 5px;
+    margin-top: -10px;
+    font-size: 20px;
+}
+.role-container {
+    min-height: 50px; /* Ajustez cette valeur selon la hauteur nécessaire pour le texte du rôle */
+    width: 100%; /* Assure que le conteneur occupe toute la largeur disponible */
+}
+
+
+
+.name-and-role {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    min-height: 150px; /* Ajustez cette valeur pour accommoder la hauteur totale du nom et du rôle */
+    width: 100%; /* Ajustez cette valeur en fonction de la taille du texte */
+}
+
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+#role {
+    animation: blink 1s step-end infinite;
+}
+
+
+
+/*pour la photo de profil */
+#profile-pic {
+    width: 150px; /* Augmentez cette valeur pour agrandir l'image */
+    height: 150px; /* Assurez-vous que la hauteur est égale à la largeur pour maintenir un cercle parfait */
+    border-radius: 50%; /* Pour garder l'effet circulaire */
+    object-fit: cover; /* Pour couvrir la zone sans déformation */
+    border: 3px solid white; /* Bordure optionnelle */
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+#profile-pic:hover {
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.6); /* Ajustez cette valeur pour l'effet de lueur */
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px; /* Ajustez l'espace entre la photo et le texte */
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-4px); /* Ajustez cette valeur selon l'amplitude de flottement souhaitée */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#profile-pic {
+    /* ...autres styles... */
+    animation: float 3s ease-in-out infinite; /* Ajustez la durée selon vos préférences */
+}
+
+
+/*le menu au dessus */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: 10px 20px; /* Ajustez selon vos besoins */
+    background-color: #000;
+    background-color: transparent;
+}
+
+.logo img {
+    width: 100px; /* Ajustez la taille du logo */
+}
+.menu-container {
+    display: flex;
+    justify-content: center; /* Centre les éléments horizontalement */
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2); /* Fond semi-transparent */
+    backdrop-filter: blur(10px);
+    color: white; /* Texte en blanc */
+    padding: 10px 20px; /* Ajustez selon vos besoins */
+    border-radius: 25px; /* Coins arrondis */
+    box-shadow: 0 8px 15px rgba(255, 255, 255, 0.1); /* Effet de lumière / ombre */
+
+    position: absolute; /* ou 'fixed' si vous voulez qu'il reste en place lors du défilement */
+    top: 60px; /* Distance depuis le haut de la page */
+    left: 50%; /* Centrage horizontal */
+    transform: translateX(-50%); /* Ajustement fin pour le centrage horizontal */
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    gap: 60px; /* Espace entre les éléments du menu */
+    padding: 0;
+    margin: 0;
+    align-items: center; /* Assure que les éléments de la liste sont centrés verticalement */
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white; /* Couleur du texte des liens */
+}
+
+.menu li.active {
+    border: 2px solid white; /* Couleur et épaisseur de la bordure */
+    border-radius: 20px; /* Arrondi des coins */
+    padding: 5px 10px; /* Espace intérieur autour du texte */
+    margin: 0px; /* Espace extérieur autour de l'élément */
+}
+
+
+.social-media a {
+    text-decoration: none;
+    margin-left: 10px; /* Espace entre les icônes/liens des réseaux sociaux */
+    color: white; /* Couleur du texte */
+}
+
+.p1 {
+    font-size: 20px;
+    color: #C1C1C1;
+}
+
+
+/*coté compétence */
+
+#skills {
+    display: flex;
+    justify-content: space-around; /* Répartit les conteneurs uniformément */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2); /* Fond semi-transparent */
+    border-radius: 25px; /* Coins arrondis */
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1); /* Effet de lumière en bas */
+    margin: 20px 0; /* Ajustez selon vos besoins */
+}
+
+.skill-container {
+    width: 30%; /* Ajustez selon la largeur désirée pour chaque compétence */
+    padding: 10px;
+    text-align: center; /* Centre le texte dans chaque conteneur */
+}
+
+.skill-container h3 {
+    color: white; /* Couleur de titre, ajustez selon vos préférences */
+}
+
+.skill-container p {
+    color: #ACACAC; /* Couleur du texte */
+}
+
+.skill-container i {
+    font-size: 30px; /* Ajustez la taille de l'icône */
+    color: #7289DA; /* Ajustez la couleur de l'icône */
+    margin-bottom: 10px; /* Espace sous l'icône */
+}
+
+/*reseaux sociaux */
+.social-media a {
+    color: white; /* Couleur des icônes */
+    margin: 0 10px; /* Espace entre les icônes */
+    font-size: 24px; /* Taille des icônes */
+    text-decoration: none; /* Enlève le soulignement des liens */
+}
+.social-media a:hover {
+    color: #7289DA; /* Change la couleur au survol, ajustez selon vos préférences */
+}
+
+
+/* mes projets */
+
+#projects {
+    padding: 10px;
+    background: rgba(0, 0, 0, 0); /* ou autre couleur/transparent selon votre design */
+}
+
+.projects-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.projects-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espace entre les projets */
+}
+
+/* Pour les écrans de taille moyenne comme les tablettes */
+@media (max-width: 768px) {
+    .project-container {
+        flex: 0 0 calc(50% - 20px); /* 2 projets par ligne */
+    }
+}
+
+/* Pour les petits écrans comme les téléphones mobiles */
+@media (max-width: 480px) {
+    .project-container {
+        flex: 0 0 100%; /* 1 projet par ligne */
+    }
+}
+
+.view-all-btn {
+    text-decoration: none;
+    color: #E50914; /* ou autre couleur */
+    font-weight: bold;
+}
+
+#projects .project-container {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante si nécessaire */
+    gap: 20px; /* Espace entre les projets */
+    justify-content: flex-start; /* Alignement au début pour éviter l'espacement excessif */
+}
+
+.project-container {
+    width: calc(33.33% - 20px); /* Trois projets par ligne, ajustez l'espace si nécessaire */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+
+.project-container img {
+    width: 100%; /* Ajuste la largeur de l'image à la largeur du conteneur */
+    height: 200px; /* Hauteur fixe pour toutes les images */
+    object-fit: cover; /* S'assure que l'image couvre la zone sans être déformée */
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Coins arrondis pour les images */
+}
+
+
+.project-container a:hover img {
+    transform: scale(1.05); /* Zoom légèrement l'image */
+}
+
+.project-container h3, .project-container p {
+    color: white; /* ou autre couleur */
+}
+
+.view-all-btn {
+    text-decoration: none;
+    color: white; /* Couleur du texte du bouton */
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    backdrop-filter: blur(10px); /* Effet de flou sur le fond */
+    border-radius: 15px; /* Coins arrondis */
+    padding: 10px 20px; /* Espacement interne pour le texte */
+    box-shadow: 0 8px 15px rgba(255, 255, 255, 0.1); /* Effet d'ombre en dessous */
+    transition: all 0.3s ease; /* Transition douce pour les effets de survol */
+}
+
+.view-all-btn:hover {
+    color: #fff; /* Changement de couleur au survol */
+    background-color: rgba(255, 255, 255, 0.4); /* Fond un peu plus opaque au survol */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Ombre plus prononcée au survol */
+}
+
+
+/*contactez moi */
+#contact {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-item {
+    margin-bottom: 20px;
+}
+
+.contact-item a {
+    color: white;
+    text-decoration: none;
+    display: block; /* Changez flex en block */
+    text-align: center;
+}
+
+.contact-item i {
+    font-size: 24px;
+    margin-bottom: 5px; /* Ajoutez une marge en bas de l'icône */
+}
+
+
+/*Mes services */
+
+#services {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.section-header h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.service-item {
+    flex-basis: calc(33.33% - 30px); /* 3 services par ligne */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.service-item i {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.service-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .service-item {
+        flex-basis: calc(50% - 30px); /* 2 services par ligne pour les tablettes */
+    }
+}
+
+@media (max-width: 480px) {
+    .service-item {
+        flex-basis: 100%; /* 1 service par ligne pour les mobiles */
+    }
+}
+
+
+
+.service-item ul.service-list {
+    list-style: none; /* Retire les puces par défaut */
+    padding-left: 0; /* Enlève le padding par défaut à gauche */
+}
+
+.service-item ul.service-list li {
+    position: relative;
+    padding-left: 30px; /* Espace pour l'icône */
+    margin-bottom: 10px; /* Espace entre les éléments de la liste */
+    text-align: left; /* Alignement du texte à gauche */
+}
+
+.service-item ul.service-list li i {
+    position: absolute;
+    left: 0; /* Positionne l'icône à gauche du texte */
+    top: 50%;
+    transform: translateY(-50%); /* Centre l'icône verticalement par rapport au texte */
+    color: #00ff00; /* Couleur de l'icône, ici un vert pour ressembler à un check */
+    font-size: 12px; /* Réduit la taille de l'icône */
+    width: 20px; /* Largeur fixe pour l'icône */
+}
